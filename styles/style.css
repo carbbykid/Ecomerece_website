@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/*Header*/
+.navbar {
+    display: flex;
+    padding: 40px;
+    align-items: center;
+}
+
+.logo img {
+    width: 125px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #555;
+} 
+
+p {
+    color: #555;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/**/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.col-2 {
+    flex-basis: 50%;
+    /* nó luôn là 50% với kích thước cửa sổ, tại vì thằng row mình không cho width nên nó ăn theo thằng cửa
+    số trình duyệt một cách linh động*/
+    /*flex-basis: auto kích thước ban đầu của box flex sẽ bằng kích thước nội dung cố định của nó dựa vào content hoặc width height*/
+    /*flex: 1 là kích thước dư chia đều cho mỗi thằng như nhau cho dù kích thước phần tử to hay nhỏ không dùng đến thằng justufy-content: space nữa vì nó không còn đồ
+    dư...nằm trên 1 hàng khi nào tràn thì xuống hàng*/
+    min-width: 300px; /*Nếu kích thước nội dung quá nhỏ thì nó ít nhất phải được chừng này*/
+    /*min-width tương quan với thằng basis: flex basis cho mỗi thằng 50% kích thước, có nghĩa hai thằng nằm cạnh nhau trên 1 hàng với điều kiện cửa sổ trình duyệt
+    ít nhất phải bằng 600px còn nếu nhỏ hơn 600px thì xuống dòng, wrap để đạt yêu cầu min-width phải bằng 300px*/
+    
+}
+
+.col-2:nth-child(2) {
+
+}
+.col-2 img {
+    padding: 20px 0;
+    max-width: 100%;/*Nếu kích thước nội dung quá to thì nó tối đa chỉ được chừng này*/
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0px;;
+}
+
+.col-2 .btn {
+    text-decoration: none;
+    background: #ff523b;
+    padding: 8px 30px;
+    color:#fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+.col-2 .btn:hover{
+    background: #563434;
+}
+
+.header {
+    background: radial-gradient(#fff,#ffd6d6);
+}
+
+.header .row {
+    margin-top: 70px;
+}
+
+/* Featured Categories  */
+.categories {
+    margin: 70px 0;
+}
+
+.row .col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.row .col-3 img {
+    width: 100%;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.small-container .row .col-4{
+    flex-basis: 20%;
+    min-width: 200px;
+    margin-bottom: 50px;
+    padding: 10px;
+    transition: transform 0.5s;
+}
+
+.small-container .row .col-4 img {
+    width: 100%;
+}
+
+.small-container .title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+
+.title:after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4 {
+    font-weight: normal;
+    color: #555;
+}
+
+.col-4 p {
+    font-size: 14px;
+}
+
+.rating .fas{
+    color: #ff523b;
+}
+
+.col-4:hover {
+    transform: translateY(-5px);
+}
+
+.offer {
+    background: radial-gradient(#fff,#ffd6d6);
+    margin-top: 20px;
+    padding: 30px 0;
+}
+
+.offer .small-container .offer-img{
+    padding: 50px;
+
+}
+
+small {
+    display: block;
+    color: #555;
+}
+
+/* testimonial */
+.testimonial {
+    padding-top: 100px;
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    padding: 40px 20px ;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+
+.testimonial .col-3 img {
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px) ;
+}
+.fa-quote-left {
+    font-size: 34px;
+    color: #ff523b;
+}
+
+.col-3 p {
+    font-size: 12px;
+    padding: 12px 0px;
+    color: #777
+}
+
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+
+/* ---------brands----- */
+.brands {
+    margin: 100px auto;
+}
+
+.col-5 {
+    width: 160px;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.col-5 img:hover{
+    filter: none;
+}
+
+.footer {
+    background:  #000;
+    color: #8a8a8a;
+    font-size:  14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1 {
+    flex-basis: 30%;
+}
+
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col-2 img {
+    width:  180px;
+    margin-bottom: 20px;
+}
+
+.footer-col-3, .footer-col-4 {
+    flex-basis: 12%;
+    text-align:  center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 140px;
+
+}
+
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.menu-icon{
+    width:  28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/* --------media query for menu--------------- */
+
+@media only screen and (max-width: 800px){
+    nav ul {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #333;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 50px;
+        display: block;
+    }
+
+    nav ul li a{
+        color:#fff;
+    }
+
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px){
+    .row {
+        text-align: center;
+    }
+    .col-4, .col-3, .col-2{
+        flex-basis: 100%;
+    }
+}
